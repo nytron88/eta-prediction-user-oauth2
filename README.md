@@ -58,6 +58,36 @@ This is React Native app that allows the users to post the ETAs through mobile a
    ![image](https://github.com/nytron88/eta-prediction-user-oauth2/assets/79620454/d6f0333d-8a5a-4cc5-8031-0aec2ef5de52)
 
 ## Configuration
+1. There are two cinfig files of interest: ```.env``` and ```app/auth0-configuration.js```.
+ 
+   a. The .env file contains the below properties:
 
+   ```
+   R_SERVER_URL = http://10.0.2.2:8181
+   X_R_SERVER_URL = http://10.0.2.2:8281
+   PROCESS_ETA_EP = /api/user/post_eta_data
+   RAND_INT = 50
+   API_AUDIENCE = https://token-management-api
+   ```
+   **R_SERVER_URL and X_R_SERVER_URL**: These are the URL's of the server instances if Privacy Guardian. Change the host name and port that suits your requirements. ***NOTE:*** When running server instances on your local machine, instead of using ```localhost```, use ```10.0.2.2```
+   because Android emulator doesn't work on ```localhost```.
 
+   **PROCESS_ETA_EP**: This is the endpoint on the Privacy Guardian that receives ```POST``` requests submitted from the app
+
+   **RAND_INT**: The random integer for Secured Multi_party Computation
+
+   **API_AUDIENCE**: The Token Management API configured in Auth0 tenant
+
+   b. ```app/auth0-configuration.js```
+
+   ```
+   module.exports = {
+    clientId: "REDACTED",
+    domain: "REDACTED",
+   };
+   ```
+   **clientId**: The application's client id in Auth0 tenant
+
+   **domain**: The Auth0 tenant's domain
+   
 
