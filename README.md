@@ -1,4 +1,5 @@
 # OAuth2 based ETA Prediction app for the users
+**This is reference implementation for the users with "developer" role who can follow the code to develop newer versions**
 
 This is React Native app that allows the users to post the ETAs through mobile app. The users can post up to 10 ETAs that are then sent over to the [Privacy Guardian](https://github.com/nytron88/eta-prediction-privacy-guardian-oauth2). The app works on the principal of [Secured Multi-Party Computation](https://en.wikipedia.org/wiki/Secure_multi-party_computation) where each ETA entered by the user is sent to to backend servers - a random integer R and and the the difference of ETA and R (X - R).
 
