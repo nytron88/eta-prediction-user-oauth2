@@ -22,7 +22,7 @@ This is React Native app that allows the users to post the ETAs through mobile a
 3. Checkout the code and change into the project directory:
    
    ```
-   git clone https://github.com/your-username/eta-prediction-user-oauth2.git
+   git clone https://github.com/nytron88/eta-prediction-user-oauth2.git
    
    cd eta-prediction-user-oauth2
    ```
